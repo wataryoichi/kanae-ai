@@ -279,6 +279,88 @@
       font-size: .93em;
     }
 
+    .architecture-map {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 240, .64);
+      overflow: hidden;
+    }
+
+    .layers {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .layer-card {
+      position: relative;
+      min-height: 205px;
+      padding: 18px 14px;
+      border: 1px solid rgba(81, 111, 67, .48);
+      background: rgba(244, 240, 231, .86);
+    }
+
+    .layer-card:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      width: 10px;
+      height: 2px;
+      background: var(--moss);
+      transform: translateY(-50%);
+    }
+
+    .layer-number {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: var(--field);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-weight: 900;
+    }
+
+    .layer-card h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .layer-card p {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .asset-row {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .asset {
+      padding: 12px;
+      border: 1px solid rgba(45, 95, 115, .35);
+      background: rgba(231, 221, 204, .45);
+      color: var(--ink-2);
+      font-size: 13px;
+    }
+
+    .asset strong {
+      display: block;
+      color: var(--blue);
+      font-size: 15px;
+    }
+
     .terminal {
       padding: 22px;
       border: 1px solid #2b302c;
@@ -403,11 +485,22 @@
       .grid,
       .workflow,
       .domain-plan,
+      .layers,
+      .asset-row,
       .section-head,
       .final .shell {
         grid-template-columns: 1fr;
       }
       .route { grid-template-columns: 1fr; }
+      .layer-card { min-height: auto; }
+      .layer-card:not(:last-child)::after {
+        right: auto;
+        left: 29px;
+        top: auto;
+        bottom: -11px;
+        width: 2px;
+        height: 10px;
+      }
     }
 
     @media (max-width: 540px) {
@@ -484,6 +577,42 @@
             <p><code>kanae</code> がキャッシュ、既存ツール群、モデル実行、診断を束ね、AIの判断を実際の成果へ変えます。</p>
           </article>
         </div>
+        <div class="architecture-map" aria-label="AI Operating System architecture">
+          <div class="layers">
+            <article class="layer-card">
+              <span class="layer-number">1</span>
+              <h3>Ticket / Intake</h3>
+              <p>依頼を構造化し、AIが着手できる作業オーダーへ翻訳します。</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-number">2</span>
+              <h3>AI Power Router</h3>
+              <p>期待ROI、機密性、コストから最適な実行先へ配分します。</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-number">3</span>
+              <h3>Execution Layer</h3>
+              <p>kanae がモデル、cache、既存ツールを束ねて成果へ変えます。</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-number">4</span>
+              <h3>Knowledge Foundry</h3>
+              <p>if-then、FAQ、評価データ、テストを再利用可能な知識にします。</p>
+            </article>
+            <article class="layer-card">
+              <span class="layer-number">5</span>
+              <h3>Operating Dashboard</h3>
+              <p>AI ROI、余剰枠、資産化件数を運用指標として可視化します。</p>
+            </article>
+          </div>
+          <div class="asset-row" aria-label="Product assets">
+            <div class="asset"><strong>ticket-intake</strong>From words to work orders</div>
+            <div class="asset"><strong>hiyu</strong>Right model, right cost</div>
+            <div class="asset"><strong>kanae</strong>Fulfill at the right tier</div>
+            <div class="asset"><strong>UDQ</strong>Documents become answers</div>
+            <div class="asset"><strong>engawa</strong>Conversations become knowledge</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -547,7 +676,7 @@
         <div class="grid">
           <article class="tile">
             <h3>PoC Access</h3>
-            <p>評価用ライセンスと対象コンポーネントを個別に案内します。導入目的、利用環境、必要なワークフローを確認してから開始します。</p>
+            <p>評価用ライセンスと対象コンポーネントを個別に案内します。相談窓口は準備中のため、当面は個別連絡ベースで開始します。</p>
           </article>
           <article class="tile">
             <h3>Licensed Bundle</h3>
