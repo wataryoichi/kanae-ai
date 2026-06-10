@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>kanae tools | AI開発の周辺を整えるCLIスイート</title>
-  <meta name="description" content="kanae toolsは、AI開発に必要なリポジトリ文脈生成、secretマスク、ローカルAI連携、環境診断、Tailscale/WSL運用を支える商用Rust CLIスイートです。">
-  <meta property="og:title" content="kanae tools">
-  <meta property="og:description" content="AI開発の周辺を、CLIから静かに、確実に、前へ。">
+  <title>kanae.ai | AI Operating System</title>
+  <meta name="description" content="kanae.aiは、依頼をAI作業オーダーに翻訳し、最適な実行層へ振り分け、社内知識と運用ダッシュボードへつなぐAI Operating Systemです。">
+  <meta property="og:title" content="kanae.ai">
+  <meta property="og:description" content="AIの意図を、実行と成果に叶える。">
   <meta property="og:image" content="assets/kanae-hero-panels.png">
   <meta property="og:type" content="website">
   <style>
@@ -135,7 +135,7 @@
 
     h1 {
       margin-bottom: 18px;
-      font-size: clamp(50px, 8vw, 112px);
+      font-size: clamp(50px, 7vw, 88px);
       line-height: .9;
       letter-spacing: 0;
     }
@@ -432,10 +432,10 @@
     <nav class="shell nav" aria-label="main navigation">
       <a class="brand" href="#">
         <span class="mark" aria-hidden="true">鼎</span>
-        <span>kanae tools</span>
+        <span>kanae.ai</span>
       </a>
       <div class="links">
-        <a href="#tools">Tools</a>
+        <a href="#architecture">Architecture</a>
         <a href="#workflow">Workflow</a>
         <a href="#domain">Domain</a>
         <a href="#access">Access</a>
@@ -446,42 +446,42 @@
   <main>
     <section class="shell hero">
       <div>
-        <p class="eyebrow">kanae.ai official entry</p>
-        <h1>kanae tools</h1>
-        <p class="lead">AI開発の周辺を、CLIから静かに、確実に、前へ。リポジトリ文脈、secretマスク、ローカルAI、Tailscale/WSL診断をひとつの商用Rustスイートにまとめます。</p>
+        <p class="eyebrow">AI Operating System</p>
+        <h1>kanae.ai</h1>
+        <p class="lead">AIの意図を、実行と成果に叶える。依頼受付、AIルーティング、実行層、社内知識、運用可視化をつなぐ、組織向けAIオペレーティングシステムです。</p>
         <div class="cta-row">
-          <a class="button" href="#quickstart">5分で見る</a>
+          <a class="button" href="#architecture">構成を見る</a>
           <a class="button secondary" href="#access">導入相談</a>
         </div>
         <div class="proof" aria-label="product facts">
-          <div><strong>50+</strong><span>CLI binaries</span></div>
-          <div><strong>ed25519</strong><span>signed license gate</span></div>
-          <div><strong>WSL2</strong><span>Tailscale/local AI ready</span></div>
+          <div><strong>5 layers</strong><span>intake to dashboard</span></div>
+          <div><strong>private</strong><span>licensed PoC access</span></div>
+          <div><strong>local</strong><span>models and documents</span></div>
         </div>
       </div>
       <div class="hero-art">
-        <img src="assets/kanae-hero-panels.png" alt="kanae tools のCLI、リポジトリマップ、secretマスク、診断パネルを並べた操作デスク">
+        <img src="assets/kanae-hero-panels.png" alt="kanae.ai の実行層、リポジトリマップ、secretマスク、診断パネルを並べた操作デスク">
       </div>
     </section>
 
-    <section class="band" id="tools">
+    <section class="band" id="architecture">
       <div class="shell">
         <div class="section-head">
-          <h2>AIにコードを書かせる前後を整える。</h2>
-          <p>kanae tools はエディタ統合や補完ではありません。Claude Code、Codex、opencode、ローカルLLMに渡す前の材料づくりと、作業環境の健全性確認を担当します。</p>
+          <h2>新規開発の中心は、ゼロから構築ではなく接続と計測へ。</h2>
+          <p>kanae.ai は単体のCLI集ではなく、既存のAI/dev資産をつなぐ実行アーキテクチャです。曖昧な依頼を作業オーダーへ変換し、期待ROIに応じてモデルとツールを選び、成果を知識として残します。</p>
         </div>
         <div class="grid">
           <article class="tile">
-            <h3>Context Engineering</h3>
-            <p><code>repo-brief</code>、<code>context-pack</code>、<code>git-context</code> で巨大リポジトリをAI向けの読み筋に圧縮します。</p>
+            <h3>Ticket / Intake</h3>
+            <p>音声やテキストの依頼を、目的、受入条件、工数、不明点を含むAI作業オーダーに構造化します。</p>
           </article>
           <article class="tile">
-            <h3>Secret Safety</h3>
-            <p><code>safe-read</code> と shared textmask により、ログやdiffに混ざったtoken、秘密鍵、env値を送信前に伏せます。</p>
+            <h3>AI Power Router</h3>
+            <p><code>hiyu</code> が期待ROI、コスト、機密性、実行条件を見て、ローカルLLM、小型モデル、高性能モデルへ振り分けます。</p>
           </article>
           <article class="tile">
-            <h3>Dev Diagnostics</h3>
-            <p><code>pro-doctor</code>、<code>dns-doctor</code>、<code>dev-fleet-status</code> がWSL、Tailscale、Ollama、portを横断診断します。</p>
+            <h3>Execution Layer</h3>
+            <p><code>kanae</code> がキャッシュ、既存ツール群、モデル実行、診断を束ね、AIの判断を実際の成果へ変えます。</p>
           </article>
         </div>
       </div>
@@ -491,48 +491,48 @@
       <div class="shell workflow">
         <div>
           <div class="section-head" style="display:block;margin-bottom:18px">
-            <h2>5分の実感。</h2>
-            <p>入れた直後に、AIへ渡す文脈の量と質、環境の詰まりどころ、secret混入リスクを確認できます。</p>
+            <h2>意図から成果までを、一つの流れにする。</h2>
+            <p>人が話す依頼、AIが使う文脈、実行結果、組織に残す知識を分断しません。各層は既存ツールを活かしながら、運用として測れる形に揃えます。</p>
           </div>
           <div class="stack">
-            <div class="route"><b>Plan</b><p>リポジトリから、目的に合う読むべきファイルを抽出。</p></div>
-            <div class="route"><b>Mask</b><p>AIへ送る前に機密っぽい値を自動で伏せる。</p></div>
-            <div class="route"><b>Diagnose</b><p>ネットワーク、ローカルAI、開発ポートを一括点検。</p></div>
+            <div class="route"><b>Intake</b><p>曖昧な依頼を、AIがそのまま着手できる作業オーダーへ翻訳。</p></div>
+            <div class="route"><b>Route</b><p>期待ROIでスコアリングし、最適なコスト帯と実行先へ配分。</p></div>
+            <div class="route"><b>Foundry</b><p>if-then、FAQ、評価データ、テストを社内知識として蓄積。</p></div>
           </div>
         </div>
-        <pre class="terminal"><code><span class="muted"># 1. AI向けReading Plan</span>
-<span class="green">$</span> repo-brief --task "OAuth2ログインを追加" --budget 20000 --out brief.md
+        <pre class="terminal"><code><span class="muted"># 1. 依頼を作業オーダーに変換</span>
+<span class="green">$</span> ticket-intake "この画面の色を直して、公開前に確認して"
 
-<span class="muted"># 2. コンテキスト予算</span>
-<span class="green">$</span> prompt-budget brief.md
-<span class="amber">12847 tokens</span>
+<span class="muted"># 2. hiyu がモデルと実行先を選ぶ</span>
+<span class="green">$</span> hiyu route --roi expected --privacy local-first
+<span class="amber">tier: local + cached context</span>
 
-<span class="muted"># 3. secretマスク済みの変更文脈</span>
-<span class="green">$</span> changed-context --since HEAD~5 --include-tests
+<span class="muted"># 3. kanae が既存ツール群で実行</span>
+<span class="green">$</span> kanae fulfill order.json
 
-<span class="muted"># 4. 開発環境の健康診断</span>
-<span class="green">$</span> pro-doctor --json</code></pre>
+<span class="muted"># 4. engawa / dashboard へ結果を残す</span>
+<span class="green">$</span> engawa post --from-result result.json</code></pre>
       </div>
     </section>
 
     <section class="band" id="workflow">
       <div class="shell">
         <div class="section-head">
-          <h2>商品価値は、単体コマンドではなく連鎖にある。</h2>
-          <p>既存OSSを寄せ集めれば似たことはできます。kanae tools は、secret masking、JSON envelope、next-step hints、ライセンス、導入手順を最初から同じ設計でつなぎます。</p>
+          <h2>プロダクト群で、AI運用のOSを作る。</h2>
+          <p>kanae.ai はひとつの巨大アプリではありません。受付、ルーティング、実行、文書知識、会話知識を分け、それぞれを連携させてAI運用の流れを作ります。</p>
         </div>
         <div class="grid">
           <article class="tile">
-            <h3>Review prep</h3>
-            <p><code>git-context</code> と <code>diff-summary</code> でPRレビュー用の材料を作り、AIに渡す前に予算を確認します。</p>
+            <h3>UDQ</h3>
+            <p>契約書、議事録、規程、PDFを社外に出さず、検索、要約、Q&A、引用つき回答に使えるローカル文書AI基盤です。</p>
           </article>
           <article class="tile">
-            <h3>Incident handoff</h3>
-            <p><code>session-pack</code> と <code>md2dash</code> で長い作業ログを共有しやすいMarkdown/HTMLへ変換します。</p>
+            <h3>engawa</h3>
+            <p>チームの会話をAIが要約、検索、質問応答できる知恵に変える、ビジネスチャット兼ナレッジベースです。</p>
           </article>
           <article class="tile">
-            <h3>Local-first AI</h3>
-            <p><code>ask-local</code>、<code>ai-summarize</code>、<code>model-bench</code> でOllama/LM StudioをCLI workflowに組み込みます。</p>
+            <h3>Operating Dashboard</h3>
+            <p>AI ROI、限界AI ROI、余剰枠率、資産化件数を見える化し、AI利用を感覚ではなく運用指標で管理します。</p>
           </article>
         </div>
       </div>
@@ -541,21 +541,21 @@
     <section class="band" id="access">
       <div class="shell">
         <div class="section-head">
-          <h2>配布は、まだ限定的に。</h2>
-          <p>kanae tools はフリー配布のユーティリティ集ではありません。現時点ではPoC、個別導入、ライセンス発行を前提に、利用環境と用途を確認してからbundleを渡します。</p>
+          <h2>提供は、まだ限定的に。</h2>
+          <p>kanae.ai はフリー配布のユーティリティ集ではありません。現時点ではPoC、個別導入、ライセンス発行を前提に、利用環境、文書管理要件、AI実行ポリシーを確認してから提供します。</p>
         </div>
         <div class="grid">
           <article class="tile">
             <h3>PoC Access</h3>
-            <p>評価用ライセンスと対象platformのbundleを個別に発行します。導入目的、利用環境、必要なコマンド群を確認してから案内します。</p>
+            <p>評価用ライセンスと対象コンポーネントを個別に案内します。導入目的、利用環境、必要なワークフローを確認してから開始します。</p>
           </article>
           <article class="tile">
             <h3>Licensed Bundle</h3>
-            <p>各binaryはed25519署名済みlicenseを起動時に検証します。期限、顧客、feature listを分けて配布できます。</p>
+            <p>実行層は署名済みlicenseを起動時に検証します。期限、顧客、feature listを分け、PoCと本番導入を切り替えられます。</p>
           </article>
           <article class="tile">
             <h3>Download Gate</h3>
-            <p><code>download.kanae.ai</code> は将来の署名済みbundle配布口です。今は一般公開ダウンロードではなく、準備中のプレースホルダーです。</p>
+            <p><code>download.kanae.ai</code> は将来の限定配布口です。今は一般公開ダウンロードではなく、準備中のプレースホルダーです。</p>
           </article>
         </div>
       </div>
@@ -564,12 +564,12 @@
     <section class="band" id="domain">
       <div class="shell">
         <div class="section-head">
-          <h2>kanae.ai の使い道。</h2>
-          <p>まずは公式入口として公開し、後からdocs、license、status、限定downloadを分けます。大きなWebアプリにする前に、信頼できる名前空間を押さえます。</p>
+          <h2>kanae.ai の名前空間。</h2>
+          <p>まずは公式入口として公開し、後からdocs、license、status、限定downloadを分けます。製品群をばらばらに見せず、AI Operating Systemとして束ねます。</p>
         </div>
         <div class="domain-plan">
-          <div class="domain"><strong>kanae.ai</strong><span>製品概要、導入導線、リリースへの入口。</span></div>
-          <div class="domain"><strong>docs.kanae.ai</strong><span>コマンドリファレンス、レシピ、FAQ。</span></div>
+          <div class="domain"><strong>kanae.ai</strong><span>AI Operating System の公式入口。</span></div>
+          <div class="domain"><strong>docs.kanae.ai</strong><span>PoC資料、運用レシピ、管理者向けFAQ。</span></div>
           <div class="domain"><strong>download.kanae.ai</strong><span>限定配布用の署名済みbundleとchecksum。</span></div>
           <div class="domain"><strong>license.kanae.ai</strong><span>将来のライセンス発行/確認API。</span></div>
         </div>
@@ -579,8 +579,8 @@
     <section class="final">
       <div class="shell">
         <div>
-          <h2>AI開発の足場を、毎日のCLIにする。</h2>
-          <p>kanae tools は、開発者がAIへ何を渡すか、何を伏せるか、どこで詰まっているかを機械的に扱うための道具箱です。</p>
+          <h2>AIの司令を、実行と結果へ。</h2>
+          <p>kanae.ai は、人の依頼、AIの判断、既存ツール、社内文書、チーム会話をつなぎ、成果として残すための実行基盤です。</p>
         </div>
         <a class="button" href="#access">Access</a>
       </div>
@@ -588,7 +588,7 @@
   </main>
 
   <footer>
-    <div class="shell">kanae.ai / kanae tools. Commercial Rust CLI suite for AI-heavy development workflows.</div>
+    <div class="shell">kanae.ai / AI Operating System. Where intent becomes done.</div>
   </footer>
 </body>
 </html>
