@@ -13,5 +13,5 @@ with any static host. Suggested DNS split:
 
 - `kanae.ai`: this top-level product entry
 - `docs.kanae.ai`: customer docs and command references
-- `download.kanae.ai`: signed release bundles and checksums
+- `download.kanae.ai`: gated signed release bundles and checksums
 - `license.kanae.ai`: future license verification / issuance endpoint

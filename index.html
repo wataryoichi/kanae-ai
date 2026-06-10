@@ -438,7 +438,7 @@
         <a href="#tools">Tools</a>
         <a href="#workflow">Workflow</a>
         <a href="#domain">Domain</a>
-        <a href="https://github.com/wataryoichi/kanae-tools">GitHub</a>
+        <a href="#access">Access</a>
       </div>
     </nav>
   </header>
@@ -451,7 +451,7 @@
         <p class="lead">AI開発の周辺を、CLIから静かに、確実に、前へ。リポジトリ文脈、secretマスク、ローカルAI、Tailscale/WSL診断をひとつの商用Rustスイートにまとめます。</p>
         <div class="cta-row">
           <a class="button" href="#quickstart">5分で見る</a>
-          <a class="button secondary" href="https://github.com/wataryoichi/kanae-tools/releases/latest">最新版を確認</a>
+          <a class="button secondary" href="#access">導入相談</a>
         </div>
         <div class="proof" aria-label="product facts">
           <div><strong>50+</strong><span>CLI binaries</span></div>
@@ -538,16 +538,39 @@
       </div>
     </section>
 
+    <section class="band" id="access">
+      <div class="shell">
+        <div class="section-head">
+          <h2>配布は、まだ限定的に。</h2>
+          <p>kanae tools はフリー配布のユーティリティ集ではありません。現時点ではPoC、個別導入、ライセンス発行を前提に、利用環境と用途を確認してからbundleを渡します。</p>
+        </div>
+        <div class="grid">
+          <article class="tile">
+            <h3>PoC Access</h3>
+            <p>評価用ライセンスと対象platformのbundleを個別に発行します。導入目的、利用環境、必要なコマンド群を確認してから案内します。</p>
+          </article>
+          <article class="tile">
+            <h3>Licensed Bundle</h3>
+            <p>各binaryはed25519署名済みlicenseを起動時に検証します。期限、顧客、feature listを分けて配布できます。</p>
+          </article>
+          <article class="tile">
+            <h3>Download Gate</h3>
+            <p><code>download.kanae.ai</code> は将来の署名済みbundle配布口です。今は一般公開ダウンロードではなく、準備中のプレースホルダーです。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="band" id="domain">
       <div class="shell">
         <div class="section-head">
           <h2>kanae.ai の使い道。</h2>
-          <p>まずは公式入口として公開し、後からdocs、download、license、statusを分けます。大きなWebアプリにする前に、信頼できる名前空間を押さえます。</p>
+          <p>まずは公式入口として公開し、後からdocs、license、status、限定downloadを分けます。大きなWebアプリにする前に、信頼できる名前空間を押さえます。</p>
         </div>
         <div class="domain-plan">
           <div class="domain"><strong>kanae.ai</strong><span>製品概要、導入導線、リリースへの入口。</span></div>
           <div class="domain"><strong>docs.kanae.ai</strong><span>コマンドリファレンス、レシピ、FAQ。</span></div>
-          <div class="domain"><strong>download.kanae.ai</strong><span>署名済みbundleとchecksum配布。</span></div>
+          <div class="domain"><strong>download.kanae.ai</strong><span>限定配布用の署名済みbundleとchecksum。</span></div>
           <div class="domain"><strong>license.kanae.ai</strong><span>将来のライセンス発行/確認API。</span></div>
         </div>
       </div>
@@ -559,7 +582,7 @@
           <h2>AI開発の足場を、毎日のCLIにする。</h2>
           <p>kanae tools は、開発者がAIへ何を渡すか、何を伏せるか、どこで詰まっているかを機械的に扱うための道具箱です。</p>
         </div>
-        <a class="button" href="https://github.com/wataryoichi/kanae-tools">Repository</a>
+        <a class="button" href="#access">Access</a>
       </div>
     </section>
   </main>
