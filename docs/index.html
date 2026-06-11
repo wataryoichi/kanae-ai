@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kanae.ai PoC Notes</title>
+  <meta name="description" content="kanae.ai のPoCで確認する範囲、提供形態、非公開配布方針の最小メモ。">
+  <style>
+    :root {
+      --ink: #171a18;
+      --ink-2: #303731;
+      --paper: #f4f0e7;
+      --line: #c9bda9;
+      --field: #fffaf0;
+      --moss: #516f43;
+      --clay: #a75037;
+      --blue: #2d5f73;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(201, 189, 169, .26) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(201, 189, 169, .22) 1px, transparent 1px),
+        var(--paper);
+      background-size: 48px 48px;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", Georgia, serif;
+      line-height: 1.75;
+    }
+    a { color: inherit; }
+    .shell { width: min(980px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(23, 26, 24, .12);
+      background: rgba(244, 240, 231, .88);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--ink);
+      background: var(--field);
+      font-size: 20px;
+    }
+    main { padding: 70px 0 90px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      color: var(--clay);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--clay);
+    }
+    h1 {
+      max-width: 820px;
+      margin: 0 0 18px;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .96;
+    }
+    .lead {
+      max-width: 760px;
+      margin-bottom: 36px;
+      color: var(--ink-2);
+      font-size: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      min-height: 210px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 240, .72);
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+    .card p, .card li {
+      color: var(--ink-2);
+      font-size: 15px;
+    }
+    .card ul { padding-left: 18px; margin-bottom: 0; }
+    .notice {
+      margin-top: 16px;
+      padding: 18px;
+      border-left: 4px solid var(--moss);
+      background: rgba(255, 250, 240, .72);
+      color: var(--ink-2);
+    }
+    footer {
+      padding: 22px 0;
+      color: #5c625a;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      border-top: 1px solid rgba(23, 26, 24, .12);
+    }
+    @media (max-width: 720px) {
+      main { padding-top: 44px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <a class="brand" href="../">
+        <span class="mark" aria-hidden="true">鼎</span>
+        <span>kanae.ai</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="shell">
+      <p class="eyebrow">PoC Notes</p>
+      <h1>導入前に確認すること。</h1>
+      <p class="lead">kanae.ai は一般公開ダウンロードではなく、PoCと個別導入を前提にしたAI Operating Systemです。ここでは初回評価で見る範囲だけを絞っています。</p>
+      <div class="grid">
+        <section class="card">
+          <h2>PoCで確認する範囲</h2>
+          <ul>
+            <li>依頼をAI作業オーダーへ変換できるか</li>
+            <li>期待ROIに応じてモデルと実行先を分けられるか</li>
+            <li>文書や会話を外に出さず知識化できるか</li>
+            <li>成果、コスト、余剰枠を運用指標として見られるか</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>提供形態</h2>
+          <p>評価用ライセンス、対象コンポーネント、導入手順を個別に渡します。実行層は署名済みlicenseを検証し、顧客、期限、feature listを分けます。</p>
+        </section>
+        <section class="card">
+          <h2>非公開配布</h2>
+          <p>kanae.ai はフリー配布のツール置き場ではありません。download endpoint は将来の限定配布口であり、現時点では一般公開リンクを置きません。</p>
+        </section>
+        <section class="card">
+          <h2>相談窓口</h2>
+          <p>フォームと専用メールは準備中です。当面は個別連絡で、利用環境、文書管理要件、AI実行ポリシーを確認してからPoCを開始します。</p>
+        </section>
+      </div>
+      <div class="notice">次に整える対象: docs.kanae.ai の正式公開、download.kanae.ai の認証付き配布、license.kanae.ai の検証API。</div>
+    </div>
+  </main>
+  <footer>
+    <div class="shell">kanae.ai / AI Operating System. Where intent becomes done.</div>
+  </footer>
+</body>
+</html>

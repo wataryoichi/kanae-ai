@@ -5,6 +5,7 @@ This directory is the first public entry point for `kanae.ai`.
 It is intentionally a dependency-free static site:
 
 - `index.html`
+- `docs/index.html`
 - `assets/kanae-hero.png` generated source
 - `assets/kanae-hero-panels.png` cropped site hero asset
 
